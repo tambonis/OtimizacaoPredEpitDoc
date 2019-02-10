@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#150
+#1,159
+#151,161
+
+./mrmr -i DadosTreinoCruCSVmrmr.csv -n 500 > OutputmRMR
+awk -F " " '{print $3, $4}' OutputmRMR > OutputmRMRGaribado
+sed -i '1,509d' OutputmRMRGaribado
+sed -i '501, 511d' OutputmRMRGaribado
+#sed -i -- 's/NA/NAA/g' OutputmRMRGaribado
