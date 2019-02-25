@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#150
+#1,159
+#151,161
+
+./mrmr -i Dados/DadosTreinomrmr.csv -n 400 > Dados/OutputmRMR
+awk -F " " '{print $3, $4}' Dados/OutputmRMR > Dados/OutputmRMRGaribado
+sed -i '1,408d' Dados/OutputmRMRGaribado
+sed -i '401,411d' Dados/OutputmRMRGaribado
+#sed -i -- 's/NA/NAA/g' OutputmRMRGaribado

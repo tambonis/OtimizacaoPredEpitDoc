@@ -1,0 +1,5 @@
+python libsvm-3.23/tools/grid.py -q -v 5 ../GeracaoFeaturizacao/Dados/DadosTreinoStandarScaler.dat > Dados/Treinamento.output
+mv DadosTreinoStandarScaler.dat.* Dados
+./libsvm-3.23/svm-train -c 0.03 -g 0.0078 ../GeracaoFeaturizacao/Dados/DadosTreinoStandarScaler.dat
+mv DadosTreinoStandarScaler.dat.model Dados
+./libsvm-3.23/svm-predict ../GeracaoFeaturizacao/Dados/DadosTesteStandarScaler.dat Dados/DadosTreinoStandarScaler.dat.model ResultsTeste.ouput
