@@ -1,0 +1,2 @@
+Na pasta GeracaoFeaturizacao: nohup python GeracaoDados.py > Dados/ResultsRun.ouput & 
+Na pasta Predicao: nohup python SVM.py > Dados/ResultsRun.ouput & 
